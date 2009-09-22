@@ -13,7 +13,7 @@
  *
  */
 
-// $Id: PKPApplication.inc.php,v 1.26 2009/09/22 18:03:27 asmecher Exp $
+// $Id: PKPApplication.inc.php,v 1.27 2009/09/22 18:36:22 asmecher Exp $
 
 
 define('REALLY_BIG_NUMBER', 10000);
@@ -242,7 +242,7 @@ class PKPApplication {
 			if ($errorno == E_ERROR) {
 				echo 'An error has occurred.  Please check your PHP log file.';
 			} elseif (Config::getVar('debug', 'display_errors')) {
-				echo $this->buildErrorMessage($errorno, $errstr, $errfile, $errline);
+				echo $this->buildErrorMessage($errorno, $errstr, $errfile, $errline) . "<br/>\n";
 			}
 
 			error_log($this->buildErrorMessage($errorno, $errstr, $errfile, $errline), 0);

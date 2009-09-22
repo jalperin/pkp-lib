@@ -12,7 +12,7 @@
  * Class for Site Settings DAO.
  * Operations for retrieving and modifying site settings.
  *
- * $Id$
+ * $Id: SiteSettingsDAO.inc.php,v 1.9 2009/09/22 18:36:22 asmecher Exp $
  */
 
 class SiteSettingsDAO extends DAO {
@@ -198,7 +198,7 @@ class SiteSettingsDAO extends DAO {
 	 * @param $paramArray array Optional parameters for variable replacement in settings
 	 */
 	function installSettings($filename, $paramArray = array()) {
-		$xmlParser =& new XMLParser();
+		$xmlParser = new XMLParser();
 		$tree = $xmlParser->parse($filename);
 
 		if (!$tree) {

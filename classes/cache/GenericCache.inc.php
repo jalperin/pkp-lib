@@ -14,7 +14,7 @@
  * null cache.
  */
 
-// $Id$
+// $Id: GenericCache.inc.php,v 1.4 2009/09/22 18:36:22 asmecher Exp $
 
 
 // Pseudotype to represent a cache miss
@@ -52,7 +52,7 @@ class GenericCache {
 		$this->context = $context;
 		$this->cacheId = $cacheId;
 		$this->fallback = $fallback;
-		$this->cacheMiss =& new generic_cache_miss;
+		$this->cacheMiss = new generic_cache_miss;
 	}
 
 	/**
@@ -60,7 +60,7 @@ class GenericCache {
 	 */
 	function get($id) {
 		$result = $this->getCache($id);
-		if (get_class($result) === 'generic_cache_miss') {
+		if (is_object($result) && get_class($result) === 'generic_cache_miss') {
 			$result = call_user_func_array($this->fallback, array(&$this, $id));
 		}
 		return $result;

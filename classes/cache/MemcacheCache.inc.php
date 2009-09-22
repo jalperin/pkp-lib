@@ -13,7 +13,7 @@
  * @brief Provides caching based on Memcache.
  */
 
-// $Id$
+// $Id: MemcacheCache.inc.php,v 1.4 2009/09/22 18:36:22 asmecher Exp $
 
 
 import('cache.GenericCache');
@@ -49,7 +49,7 @@ class MemcacheCache extends GenericCache {
 	 */
 	function MemcacheCache($context, $cacheId, $fallback, $hostname, $port) {
 		parent::GenericCache($context, $cacheId, $fallback);
-		$this->connection =& new Memcache;
+		$this->connection = new Memcache;
 
 		if (!$this->connection->connect($hostname, $port)) {
 			$this->connection = null;
