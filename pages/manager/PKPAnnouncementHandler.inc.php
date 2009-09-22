@@ -12,7 +12,7 @@
  * @brief Handle requests for announcement management functions.
  */
 
-//$Id$
+//$Id: PKPAnnouncementHandler.inc.php,v 1.5 2009/09/22 21:18:27 asmecher Exp $
 import('manager.ManagerHandler');
 
 class PKPAnnouncementHandler extends ManagerHandler {
@@ -91,8 +91,7 @@ class PKPAnnouncementHandler extends ManagerHandler {
 				$templateMgr->assign('announcementTitle', 'manager.announcements.editTitle');
 			}
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementForm =& new AnnouncementForm($announcementId);
+			$announcementForm = new AnnouncementForm($announcementId);
 			if ($announcementForm->isLocaleResubmit()) {
 				$announcementForm->readInputData();
 			} else {
@@ -125,8 +124,7 @@ class PKPAnnouncementHandler extends ManagerHandler {
 
 		if ($this->_announcementIsValid($announcementId)) {
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementForm =& new AnnouncementForm($announcementId);
+			$announcementForm = new AnnouncementForm($announcementId);
 			$announcementForm->readInputData();
 
 			if ($announcementForm->validate()) {
@@ -223,8 +221,7 @@ class PKPAnnouncementHandler extends ManagerHandler {
 				$templateMgr->assign('announcementTypeTitle', 'manager.announcementTypes.editTitle');
 			}
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementTypeForm =& new AnnouncementTypeForm($typeId);
+			$announcementTypeForm = new AnnouncementTypeForm($typeId);
 			if ($announcementTypeForm->isLocaleResubmit()) {
 				$announcementTypeForm->readInputData();
 			} else {
@@ -257,8 +254,7 @@ class PKPAnnouncementHandler extends ManagerHandler {
 
 		if ($this->_announcementTypeIsValid($typeId)) {
 
-			// FIXME: Need construction by reference or validation always fails on PHP 4.x
-			$announcementTypeForm =& new AnnouncementTypeForm($typeId);
+			$announcementTypeForm = new AnnouncementTypeForm($typeId);
 			$announcementTypeForm->readInputData();
 
 			if ($announcementTypeForm->validate()) {

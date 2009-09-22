@@ -16,7 +16,7 @@
  * @brief Class to represent a form validation check.
  */
 
-// $Id$
+// $Id: FormValidator.inc.php,v 1.7 2009/09/22 21:18:26 asmecher Exp $
 
 
 import('form.validation.FormValidatorRegExp');
@@ -93,6 +93,15 @@ class FormValidator {
 	 */
 	function getMessage() {
 		return Locale::translate($this->message);
+	}
+
+	/**
+	 * Set the form associated with this check. Used only for PHP4
+	 * compatibility when instantiating without =& (which is deprecated).
+	 * SHOULD NOT BE USED otherwise.
+	 */
+	function _setForm(&$form) {
+		$this->form =& $form;
 	}
 }
 
