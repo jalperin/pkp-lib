@@ -13,7 +13,7 @@
  * This handler parses an XML document into a tree structure of XMLNode objects.
  */
 
-// $Id$
+// $Id: XMLNode.inc.php,v 1.9 2009/09/23 00:42:47 asmecher Exp $
 
 class XMLNode {
 
@@ -96,8 +96,8 @@ class XMLNode {
 	 * @param $name string attribute name
 	 * @param value string attribute value
 	 */
-	function setAttribute($name, &$value) {
-		$this->attributes[$name] =& $value;
+	function setAttribute($name, $value) {
+		$this->attributes[$name] = $value;
 	}
 
 	/**
