@@ -8,17 +8,25 @@
  * Common site footer.
  *
  *}
+</div><!-- content -->
+</div><!-- main -->
+{** for wordpress **}
+{php}wp_footer(){/php}
+</div><!-- body -->
+<br clear="all" />
+
+<div class="license">
 {if $displayCreativeCommons}
 	{translate key="common.ccLicense"}
 {/if}
+</div>
+
 {if $pageFooter}
 	<br /><br />
 	<div id="pageFooter">{$pageFooter}</div>
 {/if}
 {call_hook name="Templates::Common::Footer::PageFooter"}
-</div><!-- content -->
-</div><!-- main -->
-</div><!-- body -->
+
 
 {get_debug_info}
 {if $enableDebugStats}{include file=$pqpTemplate}{/if}
