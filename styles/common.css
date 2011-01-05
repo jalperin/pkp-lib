@@ -98,21 +98,31 @@ input.defaultButton {
 
 #header {
 	width: 100%;
-	text-align: center;
+	background-color:#FFDC53;
+	min-height:131px;
 }
 
 #headerTitle {
 	text-align: left !important;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
+#headerTitle img {
+	margin: 0;
+	margin-top:-15px;
+	float:right;
+	margin-right:8%;
+}
+
 #header h1 {
 	margin: 0 auto;
-	padding: 0.5em 0 0.25em 10%;
-	font-family: Georgia,'Times New Roman',Times,serif;
+	padding: 0.5em 0 0.25em 3%;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-weight: normal;
+	font-size: 1.9em;
+	color:#000;	
 }
 
 #footer {
@@ -120,7 +130,6 @@ input.defaultButton {
 	min-height: 50px;
 	position: static;
 	clear: both;
-	text-align: center;
 }
 
 #footerContent {
@@ -134,23 +143,29 @@ input.defaultButton {
 }
 
 #main h2 {
-	margin: 0em 1em 0.5em 0em;
-	padding-top: 0.5em;
-	font-family: Georgia,'Times New Roman',Times,serif;
+	margin: 0em 1em 0em 0em;
+	padding-top: 0.2em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-weight: normal;
+	color: #c94909;
+	text-transform: lowercase;
 }
 
 #main h3 {
 	margin: 0em 1em 0.5em 0em;
 	padding-top: 0em;
-	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
+	letter-spacing: .02em;
+	color:#F4821F;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 1.1em;	
 }
 
 #navbar {
+	width:100%;	
 	margin-right: 0;
 	padding-bottom: 0.5em;
-	border-bottom: 2px dotted #000;
+	border-bottom: 2px solid #F4821F;
 }
 
 #breadcrumb {
@@ -163,15 +178,27 @@ input.defaultButton {
 	padding: 0;
 	padding-top: 0.5em;
 	font-size: 0.7em;
-	border-top: 2px dotted #000;
+}
+
+#content h2 {
+	margin: 0em 0em 0.5em 0em;
+	padding-top: 0.2em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 2.2em;
+	color: #F4821F;
+        border-bottom: solid 2px;
+	text-transform: lowercase;
 }
 
 #content h3 {
 	margin: 0em 1em 0.25em 0em;
-	padding-top: 0.75em;
+	padding-top: 0em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	font-size: 1.8em;
+	text-transform: lowercase;
+	color:#666;	
 }
 
 #content h4 {
@@ -195,12 +222,16 @@ input.defaultButton {
 
 #breadcrumb a {
 	text-decoration: none;
+	text-transform: lowercase;
 }
 
 #breadcrumb a.current {
-	font-weight: bold;
+    color:#c94909;
 }
 
+#breadcrumb a:hover {
+	text-decoration: underline;
+}
 
 /**
  * Footer elements
@@ -369,6 +400,7 @@ ul.formErrorList {
 
 ul.menu {
 	margin: 0;
+margin-left:3%;
 	padding: 0;
 }
 
@@ -387,6 +419,11 @@ ul.menu a {
 	font-size: 0.85em;
 	text-transform: uppercase;
 	text-decoration: none;
+    color:#000;	
+}
+
+ul.menu a:hover {
+	text-decoration: underline;
 }
 
 ul.steplist {
@@ -410,6 +447,10 @@ ul.steplist li.current {
 
 ul.steplist a {
 	text-decoration: none;
+}
+
+ul.steplist a:hover {
+	text-decoration: underline;
 }
 
 ul.plain {
@@ -438,7 +479,13 @@ div.separator {
 	margin-top: 1em;
 	margin-bottom: 0.25em;
 	padding: 0;
-	border-bottom: 1px dotted #000;
+	border-bottom: 1px solid #000;
 	font-size: 0.5em;
 	line-height: 25%;
+}
+
+div.license {
+
+font-size:10px;
+margin-left:3%;
 }

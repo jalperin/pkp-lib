@@ -41,12 +41,20 @@
 	{/foreach}
 
 	<script type="text/javascript" src="{$baseUrl}/lib/pkp/js/general.js"></script>
+	
+	<link rel="alternate" type="application/rss+xml" href="{$baseUrl}/index.php/epaa/blog/?feed=rss2" />
 	{$additionalHeadData}
+	{** for wordpress **}
+	{php}wp_head();{/php}
 </head>
+
 <body>
 <div id="container">
 
 <div id="header">
+
+{include file="common/topnavbar.tpl"}
+
 <div id="headerTitle">
 <h1>
 {if $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
@@ -65,11 +73,23 @@
 {else}
 	{$applicationName}
 {/if}
+<div id="headerContainer">
+	<div id="headerLanguageSelect">
+		<a href="{url page="user" op="setLocale" path="en_US" source=$smarty.server.REQUEST_URI escape=false}">english</a>
+		<br />
+		<a href="{url page="user" op="setLocale" path="es_ES" source=$smarty.server.REQUEST_URI escape=false}">espa&ntilde;ol</a>
+		<br />
+		<a href="{url page="user" op="setLocale" path="pt_BR" source=$smarty.server.REQUEST_URI escape=false}">portugu&ecirc;s</a>		
+	</div>
+	<div id="headerJournalDesc">{translate key="epaa.journalDesc"}</div>
+</div>	
 </h1>
 </div>
 </div>
 
 <div id="body">
+
+{include file="common/navbar.tpl"}
 
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
@@ -87,11 +107,15 @@
 {/if}
 
 <div id="main">
-{include file="common/navbar.tpl"}
 
 {include file="common/breadcrumbs.tpl"}
 
-<h2>{$pageTitleTranslated}</h2>
+{if $alternativeTitleTranslated}
+	<h2>{$alternativeTitleTranslated}</h2>
+{elseif $pageTitleTranslated eq 'education policy analysis archives'}
+{else}
+	<h2>{$pageTitleTranslated}</h2>
+{/if}
 
 {if $pageSubtitle && !$pageSubtitleTranslated}{translate|assign:"pageSubtitleTranslated" key=$pageSubtitle}{/if}
 {if $pageSubtitleTranslated}
