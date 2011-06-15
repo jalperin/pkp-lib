@@ -438,6 +438,24 @@ class PKPUserDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all users that partially match on any name field
+	 * @param $name String
+	 * @return array Usersordered by sequence
+	 */
+	function &getUsersByName($name) {
+		$result =& $this->retrieve(
+			'SELECT * FROM users
+			WHERE first_name like ?
+				|| middle_name like ?
+				|| last_name like ?
+			ORDER BY user_id',
+			array_pad(array(), 3, '%' . $name . '%')
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
+		return $returner;
+	}
+	/**
 	 * Retrieve an array of users with no role defined.
 	 * @param $allowDisabled boolean
 	 * @param $dbResultRange object The desired range of results to return

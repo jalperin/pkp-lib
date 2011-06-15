@@ -79,6 +79,25 @@ class PKPAuthorDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve all authors that partially match on any name field
+	 * @param $name String
+	 * @return array Authors ordered by sequence
+	 */
+	function &getAuthorsByName($name) {
+		$result =& $this->retrieve(
+			'SELECT * FROM authors
+			WHERE first_name like ?
+				|| middle_name like ?
+				|| last_name like ?
+			ORDER BY seq',
+			array_pad(array(), 3, '%' . $name . '%')
+		);
+
+		$returner = new DAOResultFactory($result, $this, '_returnAuthorFromRow', array('id'));
+		return $returner;
+	}
+
+	/**
 	 * Retrieve the number of authors assigned to a submission
 	 * @param $submissionId int
 	 * @return int

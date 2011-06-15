@@ -54,7 +54,7 @@
 	<message key="grid.libraryFiles.review.title">Review Library</message>
 	<message key="grid.libraryFiles.production.title">Production Library</message>
 	<message key="grid.libraryFiles.productionTemplate.title">Production Template Library</message>
-	
+
 	<!-- SubmissionChecklist -->
 	<message key="grid.submissionChecklist.title">Submission Checklist</message>
 	<message key="grid.submissionChecklist.column.checklistItem">Checklist Item</message>
@@ -68,7 +68,7 @@
 	<!-- Roles -->
 	<message key="grid.roles.currentRoles">Current Roles</message>
 	<message key="grid.roles.add">Add Role</message>
-	
+
 	<!-- Users -->
 	<message key="grid.user.currentUsers">Current Users</message>
 	<message key="grid.user.currentEnrollment">Current Enrollment</message>
@@ -103,7 +103,12 @@
 	<message key="grid.user.addRoles">Add Roles</message>
 	<message key="grid.user.selectUser">Select User</message>
 	<message key="grid.user.pleaseSelectUser">Please select a user</message>
-	
+	<message key="grid.user.authorDisambiguation">Author Disambiguation</message>
+	<message key="grid.user.existingDisambiguatedAuthors">Existing Disambiguated Authors</message>
+	<message key="grid.user.selectUniqueAuthorInstructions">Select one of the following ONLY if the author you wish to add is one of the following set.</message>
+	<message key="grid.user.potentialAuthorMatches">Potential Author Matches</message>
+	<message key="grid.user.selectPotentialAuthorInstructions">Select ALL of the following potential authors who are the same person you wish to add.</message>
+
 	<!-- Prepared emails -->
 	<message key="grid.preparedEmails.currentList">Current List</message>
 </locale>

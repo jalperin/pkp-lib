@@ -323,6 +323,7 @@ class PKPApplication {
 			'SiteSettingsDAO' => 'lib.pkp.classes.site.SiteSettingsDAO',
 			'TimeZoneDAO' => 'lib.pkp.classes.i18n.TimeZoneDAO',
 			'TemporaryFileDAO' => 'lib.pkp.classes.file.TemporaryFileDAO',
+			'UniqueAuthorDAO' => 'lib.pkp.classes.uniqueAuthor.UniqueAuthorDAO',
 			'VersionDAO' => 'lib.pkp.classes.site.VersionDAO',
 			'XMLDAO' => 'lib.pkp.classes.db.XMLDAO'
 		);

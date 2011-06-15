@@ -7,3 +7,7 @@
  * Display a checkbox that allows users to select a grid row when ticked
  *}
 <input type="checkbox" id="select-{$elementId|escape}" name="{$selectName|escape}[]" value="{$elementId|escape}" class="field checkbox" {if $selected}checked="checked"{/if} />
+{** add a hidden element with a value, if present **}
+{if $elementValue}
+<input type="hidden" id="hidden-{$elementId|escape}" name="{$elementId|escape}" value="{$elementValue|escape}" />
+{/if}

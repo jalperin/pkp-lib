@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../dtd/xmlSchema.dtd">
+
+<!--
+  * author_identifiers.xml
+  *
+  * Copyright (c) 2000-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Disambiguation Identifier schema in XML.
+  -->
+
+<schema version="0.2">
+	<!--
+	  *
+	  * TABLE author_identifiers
+	  *
+	  -->
+	<table name="author_identifiers">
+		<field name="unique_author_id" type="I8">
+			<AUTOINCREMENT />
+		</field>
+		<field name="identifier_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="identifier_id" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="content" type="C2" size="255" />
+		<descr>Author identifiers linking author_ids to unique identifiers.</descr>
+		<index name="author_identifiers_pkey">
+			<col>author_id</col>
+			<col>identifier_type</col>
+			<UNIQUE/>
+		</index>
+		<index name="author_identifiers_author_id">
+			<col>unique_author_id</col>
+		</index>
+		<index name="author_identifiers_identifier_type">
+			<col>identifier_type</col>
+		</index>
+		<index name="author_identifiers_identifier_id">
+			<col>identifier_id</col>
+		</index>
+	</table>
+</schema>
