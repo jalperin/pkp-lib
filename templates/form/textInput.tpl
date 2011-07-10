@@ -10,11 +10,15 @@
 <div{if $FBV_layoutInfo} class="{$FBV_layoutInfo}"{/if}>
 {if $FBV_multilingual}
 	{* This is a multilingual control. Enable popover display. *}
+<<<<<<< MATT put this
 	<span class="pkp_form_localization_container">
+=======
+	<span class="pkp_controllers_form_localization_container pkp_controllers_form_localization_container_focus">
+>>>>>>> and Brent had this
 		{strip}
 		<input	type="{if $FBV_isPassword}password{else}text{/if}"
 			{$FBV_textInputParams}
-			class="field multilingual_primary text{if $FBV_class} {$FBV_class|escape}{/if}{if $FBV_validation} {$FBV_validation}{/if}{if $formLocale != $currentLocale} locale_{$formLocale|escape}{/if}"
+			class="field text{if $FBV_class} {$FBV_class|escape}{/if}{if $FBV_validation} {$FBV_validation}{/if}{if $formLocale != $currentLocale} locale_{$formLocale|escape}{/if}"
 			{if $FBV_disabled} disabled="disabled"{/if}
 			value="{$FBV_value[$formLocale]|escape}"
 			name="{$FBV_name|escape}[{$formLocale|escape}]"
@@ -31,7 +35,7 @@
 					<input	type="{if $FBV_isPassword}password{else}text{/if}"
 						{$FBV_textInputParams}
 						placeholder="{$thisFormLocaleName|escape}"
-						class="field text multilingual_extra locale_{$thisFormLocale|escape}{if $FBV_sizeInfo} {$FBV_sizeInfo|escape}{/if}"
+						class="field text flag flag_{$thisFormLocale|escape}{if $FBV_sizeInfo} {$FBV_sizeInfo|escape}{/if}"
 						{if $FBV_disabled} disabled="disabled"{/if}
 						value="{$FBV_value[$thisFormLocale]|escape}"
 						name="{$FBV_name|escape}[{$thisFormLocale|escape}]"

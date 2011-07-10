@@ -10,10 +10,14 @@
 <div{if $FBV_layoutInfo} class="{$FBV_layoutInfo}"{/if}>
 {if $FBV_multilingual}
 	{* This is a multilingual control. Enable popover display. *}
+<<<<<<< MATT put this
 	<span class="pkp_form_localization_container">
+=======
+	<span class="pkp_controllers_form_localization_container pkp_controllers_form_localization_container_focus">
+>>>>>>> and you had this
 		{strip}
 			<textarea {$FBV_textAreaParams}
-				class="field multilingual_primary textarea {$FBV_class} {$FBV_height}{if $FBV_validation} {$FBV_validation|escape}{/if}{if $formLocale != $currentLocale} locale_{$formLocale|escape}{/if}{if $FBV_rich} richContent{/if}"
+				class="field textarea {$FBV_class} {$FBV_height}{if $FBV_validation} {$FBV_validation|escape}{/if}{if $formLocale != $currentLocale} locale_{$formLocale|escape}{/if}{if $FBV_rich} richContent{/if}"
 				{if $FBV_disabled} disabled="disabled"{/if}
 				name="{$FBV_name|escape}[{$formLocale|escape}]"
 				id="{$FBV_id|escape}-{$formLocale|escape}">{$FBV_value[$formLocale]|escape}
@@ -28,7 +32,7 @@
 					{strip}
 					<textarea {$FBV_textAreaParams}
 						placeholder="{$thisFormLocaleName|escape}"
-						class="field textarea multilingual_extra locale_{$thisFormLocale|escape} {$FBV_class} {$FBV_height}{if $FBV_rich} richContent{/if}"
+						class="field textarea locale_{$thisFormLocale|escape} {$FBV_class} {$FBV_height}{if $FBV_rich} richContent{/if}"
 						{if $FBV_disabled} disabled="disabled"{/if}
 						name="{$FBV_name|escape}[{$thisFormLocale|escape}]"
 						id="{$FBV_id|escape}-{$thisFormLocale|escape}">{$FBV_value[$thisFormLocale]|escape}
