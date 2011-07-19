@@ -10,11 +10,7 @@
 <div{if $FBV_layoutInfo} class="{$FBV_layoutInfo}"{/if}>
 {if $FBV_multilingual}
 	{* This is a multilingual control. Enable popover display. *}
-<<<<<<< MATT put this
-	<span class="pkp_form_localization_container">
-=======
-	<span class="pkp_controllers_form_localization_container pkp_controllers_form_localization_container_focus">
->>>>>>> and you had this
+	<span class="localization_container">
 		{strip}
 			<textarea {$FBV_textAreaParams}
 				class="field textarea {$FBV_class} {$FBV_height}{if $FBV_validation} {$FBV_validation|escape}{/if}{if $formLocale != $currentLocale} locale_{$formLocale|escape}{/if}{if $FBV_rich} richContent{/if}"
@@ -27,7 +23,7 @@
 		{$FBV_label_content}
 
 		<span>
-			<div class="pkp_form_localization_popover">
+			<div class="localization_popover">
 				{foreach from=$formLocales key=thisFormLocale item=thisFormLocaleName}{if $formLocale != $thisFormLocale}
 					{strip}
 					<textarea {$FBV_textAreaParams}
