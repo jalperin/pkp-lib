@@ -149,13 +149,6 @@
 	{$applicationName}
 {/if}
 <div id="headerContainer">
-	<div id="headerLanguageSelect">
-		<a href="{url page="user" op="setLocale" path="en_US" source=$smarty.server.REQUEST_URI escape=false}">english</a>
-		<br />
-		<a href="{url page="user" op="setLocale" path="es_ES" source=$smarty.server.REQUEST_URI escape=false}">espa&ntilde;ol</a>
-		<br />
-		<a href="{url page="user" op="setLocale" path="pt_BR" source=$smarty.server.REQUEST_URI escape=false}">portugu&ecirc;s</a>
-	</div>
 	<div id="headerJournalDesc">{translate key="epaa.journalDesc"}</div>
 </div>
 </h1>
