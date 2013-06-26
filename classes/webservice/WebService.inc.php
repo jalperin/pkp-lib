@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/citation/WebService.inc.php
+ * @file lib/pkp/classes/webservice/WebService.inc.php
  *
  * Copyright (c) 2000-2013 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -122,7 +122,7 @@ class WebService {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postOptions);
-
+		curl_setopt($ch, CURLOPT_VERBOSE, true);
 		// Set up basic authentication if required.
 		$this->_authenticateRequest($ch);
 
@@ -138,7 +138,6 @@ class WebService {
 		}
 
 		$this->_lastResponseStatus = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
 		curl_close($ch);
 		return $result;
 	}
