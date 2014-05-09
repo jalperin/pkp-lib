@@ -52,14 +52,14 @@ class PKPFreeciteCitationParserPlugin extends Plugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.citationParser.freecite.displayName');
+		return PKPLocale::translate('plugins.citationParser.freecite.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.citationParser.freecite.description');
+		return PKPLocale::translate('plugins.citationParser.freecite.description');
 	}
 }
 

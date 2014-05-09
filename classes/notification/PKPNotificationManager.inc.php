@@ -121,7 +121,7 @@ class PKPNotificationManager {
 					$notificationSettings = $this->getNotificationSettings($notification->getId());
 					return $notificationSettings['contents'];
 				} else {
-					return __('common.changesSaved');
+					return PKPLocale::translate('common.changesSaved');
 				}
 			case NOTIFICATION_TYPE_FORM_ERROR:
 			case NOTIFICATION_TYPE_ERROR:
@@ -136,7 +136,7 @@ class PKPNotificationManager {
 				return $this->_getTranslatedKeyWithParameters('admin.languages.localeInstalled', $notification->getId());
 			case NOTIFICATION_TYPE_NEW_ANNOUNCEMENT:
 				assert($notification->getAssocType() == ASSOC_TYPE_ANNOUNCEMENT);
-				return __('notification.type.newAnnouncement');
+				return PKPLocale::translate('notification.type.newAnnouncement');
 			default:
 				return null;
 		}
@@ -184,7 +184,7 @@ class PKPNotificationManager {
 	 */
 	function _getTranslatedKeyWithParameters($key, $notificationId) {
 		$params = $this->getNotificationSettings($notificationId);
-		return __($key, $this->getParamsForCurrentLocale($params));
+		return PKPLocale::translate($key, $this->getParamsForCurrentLocale($params));
 	}
 
 	/**
@@ -213,9 +213,9 @@ class PKPNotificationManager {
 
 		switch ($type) {
 			case NOTIFICATION_TYPE_FORM_ERROR:
-				return __('form.errorsOccurred');
+				return PKPLocale::translate('form.errorsOccurred');
 			default:
-				return __('notification.notification');
+				return PKPLocale::translate('notification.notification');
 		}
 	}
 

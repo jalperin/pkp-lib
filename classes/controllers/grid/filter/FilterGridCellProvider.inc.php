@@ -46,12 +46,12 @@ class FilterGridCellProvider extends GridCellProvider {
 					if (is_a($filterSetting, 'BooleanFilterSetting')) {
 						if ($settingData) {
 							if (!empty($label)) $label .= ' | ';
-							$label .= __($filterSetting->getDisplayName());
+							$label .= PKPLocale::translate($filterSetting->getDisplayName());
 						}
 					} else {
 						if (!empty($settingData)) {
 							if (!empty($label)) $label .= ' | ';
-							$label .= __($filterSetting->getDisplayName()).': '.$settingData;
+							$label .= PKPLocale::translate($filterSetting->getDisplayName()).': '.$settingData;
 						}
 					}
 				}

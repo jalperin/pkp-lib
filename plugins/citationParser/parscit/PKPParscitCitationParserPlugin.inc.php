@@ -52,14 +52,14 @@ class PKPParscitCitationParserPlugin extends Plugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.citationParser.parscit.displayName');
+		return PKPLocale::translate('plugins.citationParser.parscit.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.citationParser.parscit.description');
+		return PKPLocale::translate('plugins.citationParser.parscit.description');
 	}
 }
 

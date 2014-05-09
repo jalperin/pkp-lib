@@ -726,7 +726,7 @@ class GridHandler extends PKPHandler {
 	 */
 	function noAutocompleteResults() {
 		$returner = array();
-		$returner[] = array('label' => __('common.noMatches'), 'value' => '');
+		$returner[] = array('label' => PKPLocale::translate('common.noMatches'), 'value' => '');
 
 		$json = new JSONMessage(true, $returner);
 		return $json->getString();

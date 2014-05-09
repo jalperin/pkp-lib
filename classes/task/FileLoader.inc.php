@@ -168,7 +168,7 @@ class FileLoader extends ScheduledTask {
 		$filesDir = realpath(Config::getVar('files', 'files_dir'));
 		if (is_null($this->_basePath) || strpos($this->_basePath, $filesDir) !== 0) {
 			$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR,
-				__('admin.fileLoader.wrongBasePathLocation', array('path' => $this->_basePath)));
+				PKPLocale::translate('admin.fileLoader.wrongBasePathLocation', array('path' => $this->_basePath)));
 			return false;
 		}
 
@@ -195,7 +195,7 @@ class FileLoader extends ScheduledTask {
 				if (!(is_dir($path) && is_readable($path))) {
 					// Give up...
 					$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR,
-						__('admin.fileLoader.pathNotAccessible', array('path' => $path)));
+						PKPLocale::translate('admin.fileLoader.pathNotAccessible', array('path' => $path)));
 					return false;
 				}
 			}
@@ -227,7 +227,7 @@ class FileLoader extends ScheduledTask {
 	 * @see ScheduledTask::getName()
 	 */
 	function getName() {
-		return __('admin.fileLoader');
+		return PKPLocale::translate('admin.fileLoader');
 	}
 
 
@@ -292,7 +292,7 @@ class FileLoader extends ScheduledTask {
 		$destinationPath = $destDir . DIRECTORY_SEPARATOR . $filename;
 
 		if (!rename($currentFilePath, $destinationPath)) {
-			$message = __('admin.fileLoader.moveFileFailed', array('filename' => $filename,
+			$message = PKPLocale::translate('admin.fileLoader.moveFileFailed', array('filename' => $filename,
 				'currentFilePath' => $currentFilePath, 'destinationPath' => $destinationPath));
 			$this->notify(SCHEDULED_TASK_MESSAGE_TYPE_ERROR, $message);
 

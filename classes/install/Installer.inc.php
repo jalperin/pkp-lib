@@ -378,7 +378,7 @@ class Installer {
 				if ($sql) {
 					return $this->executeSQL($sql);
 				} else {
-					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, __('installer.installParseDBFileError')));
+					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, PKPLocale::translate('installer.installParseDBFileError')));
 					return false;
 				}
 				break;
@@ -574,7 +574,7 @@ class Installer {
 			case INSTALLER_ERROR_DB:
 				return 'DB: ' . $this->getErrorMsg();
 			default:
-				return __($this->getErrorMsg());
+				return PKPLocale::translate($this->getErrorMsg());
 		}
 	}
 

@@ -52,14 +52,14 @@ class PKPAbntCitationOutputPlugin extends Plugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.citationOutput.abnt.displayName');
+		return PKPLocale::translate('plugins.citationOutput.abnt.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.citationOutput.abnt.description');
+		return PKPLocale::translate('plugins.citationOutput.abnt.description');
 	}
 }
 

@@ -43,14 +43,14 @@ class PKPDc11MetadataPlugin extends MetadataPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.metadata.dc11.displayName');
+		return PKPLocale::translate('plugins.metadata.dc11.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.metadata.dc11.description');
+		return PKPLocale::translate('plugins.metadata.dc11.description');
 	}
 }
 

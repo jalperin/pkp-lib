@@ -78,7 +78,7 @@ class GridColumn extends GridBodyElement {
 	 */
 	function getLocalizedTitle() {
 		if ( $this->_titleTranslated ) return $this->_titleTranslated;
-		return __($this->_title);
+		return PKPLocale::translate($this->_title);
 	}
 
 	/**

@@ -637,8 +637,8 @@ class PKPUser extends DataObject {
 		$signature = $this->getFullName();
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
 		if ($a = $this->getLocalizedAffiliation()) $signature .= "\n" . $a;
-		if ($p = $this->getPhone()) $signature .= "\n" . __('user.phone') . ' ' . $p;
-		if ($f = $this->getFax()) $signature .= "\n" . __('user.fax') . ' ' . $f;
+		if ($p = $this->getPhone()) $signature .= "\n" . PKPLocale::translate('user.phone') . ' ' . $p;
+		if ($f = $this->getFax()) $signature .= "\n" . PKPLocale::translate('user.fax') . ' ' . $f;
 		$signature .= "\n" . $this->getEmail();
 		return $signature;
 	}

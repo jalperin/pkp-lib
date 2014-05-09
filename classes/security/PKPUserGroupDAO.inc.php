@@ -715,7 +715,7 @@ class PKPUserGroupDAO extends DAO {
 			$nameKey = $this->getSetting($userGroup->getId(), 'nameLocaleKey');
 			$this->updateSetting($userGroup->getId(),
 				'name',
-				array($locale => __($nameKey, null, $locale)),
+				array($locale => PKPLocale::translate($nameKey, null, $locale)),
 				'string',
 				$locale,
 				true
@@ -724,7 +724,7 @@ class PKPUserGroupDAO extends DAO {
 			$abbrevKey = $this->getSetting($userGroup->getId(), 'abbrevLocaleKey');
 			$this->updateSetting($userGroup->getId(),
 				'abbrev',
-				array($locale => __($abbrevKey, null, $locale)),
+				array($locale => PKPLocale::translate($abbrevKey, null, $locale)),
 				'string',
 				$locale,
 				true

@@ -76,7 +76,7 @@ class FormValidator {
 	 * @return string
 	 */
 	function getMessage() {
-		return __($this->_message);
+		return PKPLocale::translate($this->_message);
 	}
 
 	/**

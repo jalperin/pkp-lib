@@ -43,14 +43,14 @@ class PKPOpenurl10MetadataPlugin extends MetadataPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.metadata.openurl10.displayName');
+		return PKPLocale::translate('plugins.metadata.openurl10.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.metadata.openurl10.description');
+		return PKPLocale::translate('plugins.metadata.openurl10.description');
 	}
 }
 

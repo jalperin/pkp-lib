@@ -47,7 +47,7 @@ class GridCategoryAccordionFeature extends GridFeature{
 			new LinkAction(
 				'expandAll',
 				new NullAction(),
-				__('grid.action.extendAll'),
+				PKPLocale::translate('grid.action.extendAll'),
 				'expand_all'
 			)
 		);
@@ -56,7 +56,7 @@ class GridCategoryAccordionFeature extends GridFeature{
 			new LinkAction(
 				'collapseAll',
 				new NullAction(),
-				__('grid.action.collapseAll'),
+				PKPLocale::translate('grid.action.collapseAll'),
 				'collapse_all'
 			)
 		);

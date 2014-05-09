@@ -75,7 +75,7 @@ class Nlm30CitationSchemaCitationOutputFormatFilter extends TemplateBasedFilter 
 		$supportedPublicationTypes = $this->getSupportedPublicationTypes();
 		$inputPublicationType = $input->getStatement('[@publication-type]');
 		if (!in_array($inputPublicationType, $supportedPublicationTypes)) {
-			$this->addError(__('submission.citations.filter.unsupportedPublicationType'));
+			$this->addError(PKPLocale::translate('submission.citations.filter.unsupportedPublicationType'));
 			$emptyResult = '';
 			return $emptyResult;
 		}

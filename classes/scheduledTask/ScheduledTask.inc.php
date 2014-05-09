@@ -82,7 +82,7 @@ class ScheduledTask {
 	 * @return string
 	 */
 	function getName() {
-		return __('admin.scheduledTask');
+		return PKPLocale::translate('admin.scheduledTask');
 	}
 
 	/**
@@ -109,7 +109,7 @@ class ScheduledTask {
 
 		// The message
 		if ($subject == '') {
-			$subject = $this->getName() . ' - ' . $this->getProcessId() . ' - ' . __($type);
+			$subject = $this->getName() . ' - ' . $this->getProcessId() . ' - ' . PKPLocale::translate($type);
 		}
 
 		$mail->setSubject($subject);

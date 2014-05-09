@@ -642,8 +642,8 @@ class PKPLocale {
  * @param $locale string the locale to use
  * @return string
  */
-function __($key, $params = array(), $locale = null) {
-	return AppLocale::translate($key, $params, $locale);
-}
+//function __($key, $params = array(), $locale = null) {
+//	return AppLocale::translate($key, $params, $locale);
+//}
 
 ?>

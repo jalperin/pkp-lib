@@ -52,14 +52,14 @@ class PKPPubmedCitationLookupPlugin extends Plugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.citationLookup.pubmed.displayName');
+		return PKPLocale::translate('plugins.citationLookup.pubmed.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.citationLookup.pubmed.description');
+		return PKPLocale::translate('plugins.citationLookup.pubmed.description');
 	}
 }
 

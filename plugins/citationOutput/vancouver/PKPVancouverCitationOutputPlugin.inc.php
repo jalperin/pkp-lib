@@ -52,14 +52,14 @@ class PKPVancouverCitationOutputPlugin extends Plugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.citationOutput.vancouver.displayName');
+		return PKPLocale::translate('plugins.citationOutput.vancouver.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.citationOutput.vancouver.description');
+		return PKPLocale::translate('plugins.citationOutput.vancouver.description');
 	}
 }
 

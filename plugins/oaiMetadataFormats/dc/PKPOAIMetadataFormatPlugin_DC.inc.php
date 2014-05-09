@@ -32,11 +32,11 @@ class PKPOAIMetadataFormatPlugin_DC extends OAIMetadataFormatPlugin {
 	}
 
 	function getDisplayName() {
-		return __('plugins.oaiMetadata.dc.displayName');
+		return PKPLocale::translate('plugins.oaiMetadata.dc.displayName');
 	}
 
 	function getDescription() {
-		return __('plugins.oaiMetadata.dc.description');
+		return PKPLocale::translate('plugins.oaiMetadata.dc.description');
 	}
 
 	function getFormatClass() {

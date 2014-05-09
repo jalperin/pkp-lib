@@ -43,14 +43,14 @@ class PKPMods34MetadataPlugin extends MetadataPlugin {
 	 * @see PKPPlugin::getDisplayName()
 	 */
 	function getDisplayName() {
-		return __('plugins.metadata.mods34.displayName');
+		return PKPLocale::translate('plugins.metadata.mods34.displayName');
 	}
 
 	/**
 	 * @see PKPPlugin::getDescription()
 	 */
 	function getDescription() {
-		return __('plugins.metadata.mods34.description');
+		return PKPLocale::translate('plugins.metadata.mods34.description');
 	}
 }
 

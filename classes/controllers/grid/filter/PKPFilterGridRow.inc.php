@@ -71,7 +71,7 @@ class PKPFilterGridRow extends GridRow {
 					'grid.action.delete',
 					null,
 					'delete',
-					__('manager.setup.filter.grid.confirmDelete', array('filterName' => $filter->getDisplayName()))
+					PKPLocale::translate('manager.setup.filter.grid.confirmDelete', array('filterName' => $filter->getDisplayName()))
 				)
 			);
 		}

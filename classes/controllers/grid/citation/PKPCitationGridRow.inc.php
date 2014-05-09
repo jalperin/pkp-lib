@@ -94,7 +94,7 @@ class PKPCitationGridRow extends GridRow {
 					$router->url($request, null, null, 'deleteCitation', null,
 							array('assocId' => $assocId, 'citationId' => $rowId)),
 					'grid.action.delete', null, 'delete',
-					__('submission.citations.editor.citationlist.deleteCitationConfirmation')
+					PKPLocale::translate('submission.citations.editor.citationlist.deleteCitationConfirmation')
 				),
 				GRID_ACTION_POSITION_ROW_LEFT
 			);

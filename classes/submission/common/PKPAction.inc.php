@@ -97,10 +97,10 @@ class PKPAction {
 		// Display an initial help message.
 		$citations =& $citationDao->getObjectsByAssocId(ASSOC_TYPE_ARTICLE, $submission->getId());
 		if ($citations->getCount() > 0) {
-			$initialHelpMessage = __('submission.citations.editor.details.pleaseClickOnCitationToStartEditing');
+			$initialHelpMessage = PKPLocale::translate('submission.citations.editor.details.pleaseClickOnCitationToStartEditing');
 		} else {
 			$articleMetadataUrl = $router->url($request, null, null, 'viewMetadata', $submission->getId());
-			$initialHelpMessage = __('submission.citations.editor.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
+			$initialHelpMessage = PKPLocale::translate('submission.citations.editor.pleaseImportCitationsFirst', array('articleMetadataUrl' => $articleMetadataUrl));
 		}
 		$templateMgr->assign('initialHelpMessage', $initialHelpMessage);
 

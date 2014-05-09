@@ -343,7 +343,7 @@ class PKPComponentRouter extends PKPRouter {
 			AppLocale::requireComponents(LOCALE_COMPONENT_APPLICATION_COMMON);
 		}
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_USER);
-		$translatedAuthorizationMessage = __($authorizationMessage);
+		$translatedAuthorizationMessage = PKPLocale::translate($authorizationMessage);
 
 		// Add the router name and operation if show_stacktrace is enabled.
 		if (Config::getVar('debug', 'show_stacktrace')) {

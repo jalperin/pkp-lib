@@ -71,7 +71,7 @@ class ListbuilderHandler extends GridHandler {
 				new LinkAction(
 					'addItem',
 					new NullAction(),
-					__('grid.action.addItem'),
+					PKPLocale::translate('grid.action.addItem'),
 					'add_item'
 				)
 			);

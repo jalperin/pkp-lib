@@ -97,7 +97,7 @@ class OrderItemsFeature extends GridFeature{
 				new LinkAction(
 					'orderItems',
 					new NullAction(),
-					__('grid.action.order'),
+					PKPLocale::translate('grid.action.order'),
 					'order_items'
 				)
 			);

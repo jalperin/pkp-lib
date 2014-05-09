@@ -179,7 +179,7 @@ class LegacyLinkAction {
 	 */
 	function getLocalizedTitle() {
 		if ( $this->_titleLocalized ) return $this->_titleLocalized;
-		return __($this->_title);
+		return PKPLocale::translate($this->_title);
 	}
 
 	/**

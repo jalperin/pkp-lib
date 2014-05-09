@@ -142,7 +142,7 @@ class InstallTool extends CommandLineTool {
 	 * @param $title string
 	 */
 	function printTitle($title) {
-		printf("\n%s\n%s\n%s\n", str_repeat('-', 80), __($title), str_repeat('-', 80));
+		printf("\n%s\n%s\n%s\n", str_repeat('-', 80), PKPLocale::translate($title), str_repeat('-', 80));
 	}
 
 	/**
@@ -167,9 +167,9 @@ class InstallTool extends CommandLineTool {
 	function readParam($name, $prompt, $defaultValue = null) {
 		do {
 			if (isset($defaultValue)) {
-				printf("%s (%s): ", __($prompt), $defaultValue !== '' ? $defaultValue : __('common.none'));
+				printf("%s (%s): ", PKPLocale::translate($prompt), $defaultValue !== '' ? $defaultValue : PKPLocale::translate('common.none'));
 			} else {
-				printf("%s: ", __($prompt));
+				printf("%s: ", PKPLocale::translate($prompt));
 			}
 
 			$value = $this->readInput();
@@ -189,11 +189,11 @@ class InstallTool extends CommandLineTool {
 	 */
 	function readParamBoolean($name, $prompt, $default = 'N') {
 		if ($default == 'N') {
-			printf("%s [y/N] ", __($prompt));
+			printf("%s [y/N] ", PKPLocale::translate($prompt));
 			$value = $this->readInput();
 			$this->params[$name] = (int)(strtolower(substr(trim($value), 0, 1)) == 'y');
 		} else {
-			printf("%s [Y/n] ", __($prompt));
+			printf("%s [Y/n] ", PKPLocale::translate($prompt));
 			$value = $this->readInput();
 			$this->params[$name] = (int)(strtolower(substr(trim($value), 0, 1)) != 'n');
 		}
@@ -208,17 +208,17 @@ class InstallTool extends CommandLineTool {
 	 */
 	function readParamOptions($name, $prompt, $options, $defaultValue = null, $allowMultiple = false) {
 		do {
-			printf("%s\n", __($prompt));
+			printf("%s\n", PKPLocale::translate($prompt));
 			foreach ($options as $k => $v) {
 				printf("  %-10s %s\n", '[' . $k . ']', $v);
 			}
 			if ($allowMultiple) {
-				printf("  (%s)\n", __('installer.form.separateMultiple'));
+				printf("  (%s)\n", PKPLocale::translate('installer.form.separateMultiple'));
 			}
 			if (isset($defaultValue)) {
-				printf("%s (%s): ", __('common.select'), $defaultValue !== '' ? $defaultValue : __('common.none'));
+				printf("%s (%s): ", PKPLocale::translate('common.select'), $defaultValue !== '' ? $defaultValue : PKPLocale::translate('common.none'));
 			} else {
-				printf("%s: ", __('common.select'));
+				printf("%s: ", PKPLocale::translate('common.select'));
 			}
 
 			$value = $this->readInput();

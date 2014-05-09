@@ -54,11 +54,11 @@ class IntegratePKP {
 
 				// Check that the public/site/ directory exists and is writeable
 				if(!file_exists($siteDir) || !is_writeable($siteDir)) {
-					die(__('installer.installFilesDirError'));
+					die(PKPLocale::translate('installer.installFilesDirError'));
 				}
 				// Create the images directory
 				if (!$fileManager->mkdir($siteDir . '/images/')) {
-					die(__('installer.installFilesDirError'));
+					die(PKPLocale::translate('installer.installFilesDirError'));
 				}
 			}
 			//Check if user's image directory exists, else create it
@@ -68,11 +68,11 @@ class IntegratePKP {
 
 				// Check that the public/site/images/ directory exists and is writeable
 				if(!file_exists($siteDir . '/images/') || !is_writeable($siteDir . '/images/')) {
-					die(__('installer.installFilesDirError'));
+					die(PKPLocale::translate('installer.installFilesDirError'));
 				}
 				// Create the directory to store the user's images
 				if (!$fileManager->mkdir($siteDir . '/images/' . $user->getUsername())) {
-					die(__('installer.installFilesDirError'));
+					die(PKPLocale::translate('installer.installFilesDirError'));
 				}
 				$this->imageDir = $publicDir . '/site/images/' . $user->getUsername();
 
@@ -98,7 +98,7 @@ class IntegratePKP {
 			return $this->baseDir . '/' . $this->imageDir;
 		}
 
-		die(__('installer.installFilesDirError'));
+		die(PKPLocale::translate('installer.installFilesDirError'));
 	}
 
 	/**
@@ -112,7 +112,7 @@ class IntegratePKP {
 			return $urlParts['path'];
 		}
 
-		die(__('installer.installFilesDirError'));
+		die(PKPLocale::translate('installer.installFilesDirError'));
 	}
 }
 ?>

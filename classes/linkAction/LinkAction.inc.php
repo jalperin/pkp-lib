@@ -82,7 +82,7 @@ class LinkAction {
 	function getHoverTitle() {
 		// for the locale key, remove any unique ids from the id.
 		$id = preg_replace('/([^-]+)\-.+$/', '$1', $this->getId());
-		$title = __('grid.action.' . $id);
+		$title = PKPLocale::translate('grid.action.' . $id);
 		return $title;
 	}
 
